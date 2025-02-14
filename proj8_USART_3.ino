@@ -1,5 +1,3 @@
-//Użycie interfejsu USART do odczytu wartości z potencjometru wyzwalanego automatycznie przez przerwannia zewnętrzne
-
 #include <avr/io.h>
 #include <util/delay.h>
 #include <string.h>
@@ -10,9 +8,6 @@ void USART_init()
 {
   UBRR0H = (unsigned char)(103>>8);
   UBRR0L = (unsigned char)103;
-    
-  //Adres we/wy rejestrów danych nadawczych USART i rejestry odbierania danych USART
-  //UDR0
 
   //By bufor transmisji mógłbyć zapisany
   UCSR0A |= (1<<UDRE0);
